@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+<body>
+    
+    <div class="card-header">
+        <h3 class="card-title" id="title">Todo App</h3>
+    </div>
+
+    <ul id="task-list">
+        <li class="task">Task 1</li>
+        <li class="task">Task 2</li>
+        <li class="task">Task 3</li>
+        <li class="task">Task 4</li>
+    </ul>
+    <ul id="task-list2">
+        <li class="task">Task 1</li>
+        <li class="task">Task 2</li>
+        <li class="task">Task 3</li>
+        <li class="task">Task 4</li>
+    </ul>
+
+    <script>
+        let result;
+        let taskList;
+
+        result = document.getElementsByClassName("task")[0];
+        result = document.getElementsByClassName("task")[1];
+        result = document.getElementsByClassName("task")[2];
+        result = document.getElementsByClassName("task")[3];
+
+        //taskList = document.getElementsByClassName("task");
+        // ul = document.getElementById("task-list2");
+        // taskList=ul.getElementsByTagName("li");
+        taskList = document.querySelectorAll("#task-list li");
+
+        // Toplu seçim index numaralı işlem sağlama
+        // for(let i=0; i<taskList.length; i++){
+        //     console.log(taskList[i]);
+        // }
+
+        // //Toplu seçim index numarası olmadan işlem sağlama (verileri yazar)
+        for(let task of taskList){
+            task.style.color="red";
+            task.style.fontSize="17px";
+            task.innerText="Task InnerText"; 
+         }
+
+        
+        //Toplu seçim index numarası olmadan işlem sağlama (index numaralarını yazar)
+        // for(let task in taskList){
+        //     console.log(task);
+        // }
+
+        // console.log(result);
+    </script>
+</body>
+</html>

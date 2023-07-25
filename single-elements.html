@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+<body>
+    
+    <div class="card-header">
+        <h3 class="card-title" id="title">Todo App</h3>
+    </div>
+
+    <ul id="task-list">
+        <li>Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li>
+        <li>Task 4</li>
+    </ul>
+
+    <script>
+        let result;
+        result = document.getElementById("title");
+        // result = document.getElementById("title").id;
+        result = document.getElementById("title").className;
+        result = document.getElementById("title").classList;
+
+        document.getElementById("title").style.fontSize = "25px";
+        document.getElementById("title").style.color = "green";
+        // document.getElementById("title").style.display = "none";
+
+        document.getElementById("title").innerText = "To Do App InnerText";
+        document.getElementById("title").innerHTML = "<p>To Do App InnerHTML</p>";
+
+        result = document.querySelector("#title"); //id değeri title olan ilk değeri seçer.
+        result = document.querySelector(".card-header"); //class değeri card-header olan ilk değeri seçer.
+        result = document.querySelector("div");
+        
+        result = document.querySelector("li"); //ilk gördüğü li değerini getirir.
+        result = document.querySelector("li:first-child"); //ilk li alır.
+        result = document.querySelector("li:last-child"); //son li alır.
+        result = document.querySelector("li:nth-child(2)"); //2. li alır.
+
+
+
+        console.log(result);
+    </script>
+</body>
+</html>
